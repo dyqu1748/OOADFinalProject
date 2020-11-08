@@ -3,8 +3,7 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private int money;
-    private int salary;
-    private String job;
+    private Job job;
     private String spouse;
     private ArrayList<String> children;
     private int spaceLocation;
@@ -13,20 +12,16 @@ public class Player {
     private int loans;
     private int stocks;
     private boolean carInsurance;
-    private boolean houseInsurance;
-    private String homeType;
+    private Home home;
     private String degree;
 
     public Player(){
         this.money = 0;
-        this.salary = 0;
         this.loans = 0;
         this.stocks = 0;
         this.isTurn = false;
         this.retired = false;
         this.carInsurance = false;
-        this.houseInsurance = false;
-        this.homeType = "";
         this.degree = "";
         this.children = new ArrayList<String>();
     }
@@ -39,8 +34,12 @@ public class Player {
         return this.money;
     }
 
-    public String getJob(){
+    public Job getJob(){
         return this.job;
+    }
+
+    public void setJob(Job job){
+        this.job = job;
     }
 
     public String getSpouse(){
@@ -61,10 +60,6 @@ public class Player {
 
     public void setMoney(int money){
         this.money += money;
-    }
-
-    public void setJob(String job){
-        this.job = job;
     }
 
     public void setSpouse(String spouse){
@@ -93,14 +88,6 @@ public class Player {
 
     public boolean getIsTurn(){
         return this.isTurn;
-    }
-
-    public void setHomeType(String type){
-        this.homeType = type;
-    }
-
-    public String getHomeType(){
-        return this.homeType;
     }
 
     public void setDegree(String degree){
@@ -136,20 +123,11 @@ public class Player {
         return this.carInsurance;
     }
 
-    public void setHouseInsurance(boolean bought){
-        this.houseInsurance = bought;
+    public void setHome(Home home){
+        this.home = home;
     }
 
-    public boolean getHouseInsurance(){
-        return this.houseInsurance;
-    }
-
-
-    public void setSalary(int salary){
-        this.salary = salary;
-    }
-
-    public int getSalary(){
-        return this.salary;
+    public Home getHome(){
+        return this.home;
     }
 }
