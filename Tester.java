@@ -35,11 +35,28 @@ public class Tester {
         }
 
         //Check if player creation was successful
-        int i = 0;
+        int i = 1;
         for(Player p: players){
             System.out.println("Player " + i + "'s name: "+p.getName());
             i++;
         }
+
+        //Test Home Creation
+        //Uninsured home
+        Home h1 = new Mansion();
+
+        //Insured home
+        Home h2 = new SuburbanHome();
+        Home h2i = new HomeInsurance(h2);
+
+        System.out.println("House 1 description: "+h1.getDescription());
+        System.out.println("House 2 description: "+ h2i.getDescription());
+
+
+        //Test Job Creation
+        Job j1 = new Job("Surgeon",500);
+        System.out.println("Job type: "+j1.getType());
+        System.out.println("Job salary: "+j1.getSalary());
 
     }
 }
