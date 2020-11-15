@@ -2,5 +2,5 @@ public abstract class HomeDecorator extends Home{
 
     protected Home home;
 
-    public abstract String getDescription();
+    public abstract String getType();
 }

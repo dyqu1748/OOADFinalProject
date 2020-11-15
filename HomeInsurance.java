@@ -4,8 +4,8 @@ public class HomeInsurance extends HomeDecorator{
         this.home = home;
     }
 
-    public String getDescription(){
-        return (home.getDescription() + "; Insured");
+    public String getType(){
+        return (home.getType() + "; Insured");
     }
 
     public int getCost(){

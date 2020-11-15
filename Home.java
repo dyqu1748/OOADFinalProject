@@ -1,14 +1,14 @@
 public abstract class Home {
 
-    private String description;
+    private String type;
     private int cost;
 
-    public void setDescription(String desc){
-        this.description = desc;
+    public void setType(String type){
+        this.type = type;
     }
 
-    public String getDescription(){
-        return this.description;
+    public String getType(){
+        return this.type;
     }
 
     public void setCost(int cost){

@@ -1,6 +1,6 @@
 public class Mansion extends Home {
     public Mansion(){
-        this.setDescription("Mansion");
+        this.setType("Mansion");
         this.setCost(10000);
     }
 }

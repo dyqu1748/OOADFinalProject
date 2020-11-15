@@ -38,10 +38,6 @@ public class Player {
         return this.job;
     }
 
-    public void setJob(Job job){
-        this.job = job;
-    }
-
     public String getSpouse(){
         return this.spouse;
     }
@@ -62,6 +58,9 @@ public class Player {
         this.money += money;
     }
 
+    public void setJob(Job job){
+        this.job = job;
+    }
     public void setSpouse(String spouse){
         this.spouse = spouse;
     }
