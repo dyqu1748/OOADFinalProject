@@ -9,19 +9,13 @@ public class Player {
     private int spaceLocation;
     private boolean isTurn;
     private boolean retired;
-    private int loans;
-    private int stocks;
-    private boolean carInsurance;
     private Home home;
     private String degree;
 
     public Player(){
         this.money = 0;
-        this.loans = 0;
-        this.stocks = 0;
         this.isTurn = false;
         this.retired = false;
-        this.carInsurance = false;
         this.degree = "";
         this.children = new ArrayList<String>();
     }
@@ -97,30 +91,6 @@ public class Player {
         return this.degree;
     }
 
-    //Loan and stock amounts will be a constant; attributes will track how many of each the player has
-    public void setLoans(){
-        this.loans++;
-    }
-
-    public int getLoans(){
-        return this.loans;
-    }
-
-    public void setStocks(){
-        this.stocks++;
-    }
-
-    public int getStocks(){
-        return this.stocks;
-    }
-
-    public void setCarInsurance(boolean bought){
-        this.carInsurance = bought;
-    }
-
-    public boolean getCarInsurance(){
-        return this.carInsurance;
-    }
 
     public void setHome(Home home){
         this.home = home;

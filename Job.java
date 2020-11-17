@@ -1,11 +1,7 @@
-public class Job {
+public abstract class Job {
     private String type;
     private int salary;
-
-    public Job(String type, int salary){
-        this.type = type;
-        this.salary = salary;
-    }
+    private boolean degreeReq;
 
     public void setType(String type){
         this.type = type;
@@ -21,5 +17,13 @@ public class Job {
 
     public int getSalary(){
         return this.salary;
+    }
+
+    public void setDegreeReq(Boolean deg){
+        this.degreeReq = deg;
+    }
+
+    public Boolean getDegreeReq(){
+        return this.degreeReq;
     }
 }

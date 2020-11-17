@@ -49,14 +49,27 @@ public class Tester {
         Home h2 = new SuburbanHome();
         Home h2i = new HomeInsurance(h2);
 
-        System.out.println("House 1 description: "+h1.getDescription());
-        System.out.println("House 2 description: "+ h2i.getDescription());
+        System.out.println("House 1 description: "+h1.getType());
+        System.out.println("House 2 description: "+ h2i.getType());
 
 
         //Test Job Creation
-        Job j1 = new Job("Surgeon",500);
-        System.out.println("Job type: "+j1.getType());
-        System.out.println("Job salary: "+j1.getSalary());
+        Job j1 = new Cashier();
+        Job j2 = new Programmer();
+        System.out.println(j1.getType());
+        System.out.println(j1.getSalary());
+        System.out.println("Degree:" + j1.getDegreeReq());
+        System.out.println(j2.getType());
+        System.out.println(j2.getSalary());
+        System.out.println("Degree:" + j2.getDegreeReq());
+
+        //Test board creation
+        Board board = new Board();
+        for (int sp = 0; sp < 41; sp++){
+            Space curSpace = board.getSpace(sp);
+            System.out.println(curSpace.getColor());
+            System.out.println(curSpace.getMeaning());
+        }
 
     }
 }
