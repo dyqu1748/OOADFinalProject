@@ -7,12 +7,14 @@ public class CareTaker {
         mementoList = new ArrayList<Memento>();
     }
 
-    //Need to finish; Ask Casey for implementation details
-    public void save(){
-
+    //https://www.tutorialspoint.com/design_pattern/memento_pattern.htm
+    public void add(Memento state)
+    {
+        mementoList.add(state);
     }
 
-//    public Memento undo(){
-//
-//    }
+    public Memento get(int index)
+    {
+        return mementoList.get(index);
+    }
 }

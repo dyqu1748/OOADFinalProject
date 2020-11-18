@@ -13,7 +13,7 @@ public class Originator {
         return new Memento(this.state);
     }
 
-    //Need to finish/clarify; unsure if implementation is correct
+    //Need to finish/clarify; unsure if implementation is correct; good to go
     public void getStateFromMemento(Memento memento){
         this.state = memento.getState();
     }
