@@ -9,7 +9,8 @@ public class GameState {
 
     //Need to finish
     public GameState(){
-
+        playersList = new ArrayList<Player>;
+        wheel = 10;
     }
 
     public void addPlayer(Player p){
@@ -28,17 +29,31 @@ public class GameState {
         return this.board;
     }
 
+    public int getWheelValue()
+    {
+        return this.wheel;
+    }
+
     //Spin the wheel and go forward 1 - 10 spaces
     public int spinWheel(){
         Random rand = new Random();
-        int moves = rand.nextInt(10) + 1;
+        int moves = rand.nextInt(this.getWheelValue()) + 1;
         return moves;
     }
 
-    //Need to finish
-    public void useIterator(){
+    /*public void play()
+    {
+        while(getPlayers().size())
+        {
+            ArrayList<Player> playerList = this.getPlayers();
+            for(int i = 0; i < getPlayers().size(); i++)
+            {
+                int roll = this.spinWheel();
+                playerList[i].setLocation(playerList[i].getLocation() + roll);
 
-    }
+            }
+        }
+    }*/
 
     public PlayerFactory createPlayerFactory(){
         return new PlayerFactory();
