@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Memento {
 
-    private GameState state;
+    private final GameState state;
 
-    public Memento(GameState gs){
+    public Memento(GameState gs)
+    {
         this.state = gs;
     }
 

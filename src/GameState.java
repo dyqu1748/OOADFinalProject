@@ -9,7 +9,7 @@ public class GameState {
 
     //Need to finish
     public GameState(){
-        playersList = new ArrayList<Player>;
+        playersList = new ArrayList<Player>();
         wheel = 10;
     }
 

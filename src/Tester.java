@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args){
-
+    /*
         //Test making players
 
         Scanner userInput = new Scanner(System.in);
@@ -70,6 +70,25 @@ public class Tester {
             System.out.println(curSpace.getColor());
             System.out.println(curSpace.getMeaning());
         }
-
+    */
+        GameState gameState = new GameState();
+        PlayerFactory pf = new PlayerFactory();
+        Originator originator = new Originator();
+        CareTaker careTaker = new CareTaker();
+        Player joe = pf.createPlayer("Joe");
+        Player bob = pf.createPlayer("Bob");
+        gameState.addPlayer(joe);
+        System.out.println("The number of players is: " + gameState.getPlayers().size());
+        originator.setState(gameState);
+        Memento memento = originator.saveStateToMemento();
+        careTaker.add(memento);
+        System.out.println("The state of the game has been saved.");
+        gameState.addPlayer(bob);
+        System.out.println("The number of players is: " + gameState.getPlayers().size());
+        memento = careTaker.get(0);
+        originator.getStateFromMemento(memento);
+        System.out.println("The state of the game has been reverted.");
+        gameState = originator.getState();
+        System.out.println("The number of players is: " + gameState.getPlayers().size());
     }
 }
