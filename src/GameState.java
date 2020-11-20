@@ -17,8 +17,17 @@ public class GameState {
         this.playersList.add(p);
     }
 
+    public void setPlayers(ArrayList<Player> pl){
+        this.playersList = pl;
+    }
+
     public ArrayList<Player> getPlayers(){
         return this.playersList;
+    }
+
+    public Player getPlayerAt(int i)
+    {
+        return this.playersList.get(i);
     }
 
     public void setBoard(Board board){
