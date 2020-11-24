@@ -10,14 +10,13 @@ public class Player {
     private boolean isTurn;
     private boolean retired;
     private Home home;
-    private boolean degree;
+    private String degree;
 
     public Player(){
-        this.money = 7500;
-        this.isTurn = true;
+        this.money = 0;
+        this.isTurn = false;
         this.retired = false;
-        this.degree = false;
-        this.spouse = "";
+        this.degree = "";
         this.children = new ArrayList<String>();
     }
 
@@ -84,11 +83,11 @@ public class Player {
         return this.isTurn;
     }
 
-    public void setDegree(boolean degree){
+    public void setDegree(String degree){
         this.degree =degree;
     }
 
-    public boolean getDegree(){
+    public String getDegree(){
         return this.degree;
     }
 

@@ -8,9 +8,9 @@ public class CareTaker {
     }
 
     //https://www.tutorialspoint.com/design_pattern/memento_pattern.htm
-    public void add(Memento state)
+    public void add(Memento memento)
     {
-        mementoList.add(state);
+        mementoList.add(memento);
     }
 
     public Memento get(int index)
