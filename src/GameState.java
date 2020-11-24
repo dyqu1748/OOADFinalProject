@@ -7,16 +7,17 @@ public class GameState {
     private int wheel;
     private PlayerFactory playerFactory;
 
-    //Need to finish
     public GameState(){
         playersList = new ArrayList<Player>();
         wheel = 10;
     }
 
+    //add Player object to current playerlist
     public void addPlayer(Player p){
         this.playersList.add(p);
     }
 
+    //If we need to override the playerlist with one from a previous state, this will allow us to do so
     public void setPlayers(ArrayList<Player> pl){
         this.playersList = pl;
     }
@@ -25,6 +26,7 @@ public class GameState {
         return this.playersList;
     }
 
+    //Get player object at a specific index (i.e get player 1)
     public Player getPlayerAt(int i)
     {
         return this.playersList.get(i);
@@ -49,20 +51,6 @@ public class GameState {
         int moves = rand.nextInt(this.getWheelValue()) + 1;
         return moves;
     }
-
-    /*public void play()
-    {
-        while(getPlayers().size())
-        {
-            ArrayList<Player> playerList = this.getPlayers();
-            for(int i = 0; i < getPlayers().size(); i++)
-            {
-                int roll = this.spinWheel();
-                playerList[i].setLocation(playerList[i].getLocation() + roll);
-
-            }
-        }
-    }*/
 
     public PlayerFactory createPlayerFactory(){
         return new PlayerFactory();

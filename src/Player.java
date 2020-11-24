@@ -10,16 +10,19 @@ public class Player {
     private boolean isTurn;
     private boolean retired;
     private Home home;
-    private String degree;
+    private boolean degree;
 
+    //Initialize player
     public Player(){
-        this.money = 0;
+        this.money = 7500;
         this.isTurn = false;
         this.retired = false;
-        this.degree = "";
+        this.degree = false;
         this.children = new ArrayList<String>();
+        this.home=null;
     }
 
+    //Getters and setters for all of the player's private attributes
     public String getName(){
         return this.name;
     }
@@ -28,6 +31,7 @@ public class Player {
         return this.money;
     }
 
+    //getJob will be used to add the appropriate amount of money to the player when they land on a payday space (get salary of the job)
     public Job getJob(){
         return this.job;
     }
@@ -48,6 +52,7 @@ public class Player {
         this.name = name;
     }
 
+    //Money will be added to the player's account. If money need to be taken away, provide a negative number as the argument.
     public void setMoney(int money){
         this.money += money;
     }
@@ -55,6 +60,7 @@ public class Player {
     public void setJob(Job job){
         this.job = job;
     }
+
     public void setSpouse(String spouse){
         this.spouse = spouse;
     }
@@ -67,6 +73,7 @@ public class Player {
         this.spaceLocation = location;
     }
 
+    //Set and get retired will be used to check whether a player is done with the game (will skip over them if true)
     public void setRetired(boolean ret){
         this.retired = ret;
     }
@@ -83,11 +90,12 @@ public class Player {
         return this.isTurn;
     }
 
-    public void setDegree(String degree){
+    //Set and get degree will be used when the player is choosing their career (some jobs require a degree)
+    public void setDegree(boolean degree){
         this.degree =degree;
     }
 
-    public String getDegree(){
+    public boolean getDegree(){
         return this.degree;
     }
 

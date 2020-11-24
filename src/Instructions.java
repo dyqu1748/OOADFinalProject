@@ -6,6 +6,7 @@ public class Instructions {
     private Random randomGenerator = new Random();
 
     public Instructions(){
+        //All possible events that can occur on a blue space
         instructs = new ArrayList<>();
         instructs.add("Pay Salesclerk $15");
         instructs.add("Pay Waiter $50");

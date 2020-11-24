@@ -22,6 +22,7 @@ public class Board {
                     this.spaces.add(new Green());
                     break;
                 case 2:
+                    //Generate a Red space that has a random behavior
                     int randIntRed = rand.nextInt(4);
                     Red red_space = new Red();
                     switch (randIntRed){

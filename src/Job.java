@@ -3,10 +3,12 @@ public abstract class Job {
     private int salary;
     private boolean degreeReq;
 
+    //Setters and getters for Job private attributes
     public void setType(String type){
         this.type = type;
     }
 
+    //Salary is how much the player will earn when landing on a payday space
     public void setSalary(int salary){
         this.salary = salary;
     }
@@ -19,6 +21,7 @@ public abstract class Job {
         return this.salary;
     }
 
+    //Jobs that require a degree will require that the player has gone to college
     public void setDegreeReq(Boolean deg){
         this.degreeReq = deg;
     }
