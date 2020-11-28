@@ -56,4 +56,9 @@ public class GameState {
         return new PlayerFactory();
     }
 
+    public void createPlayer(String name){
+        //create and add player to the list of players
+        this.playersList.add(this.playerFactory.createPlayer(name));
+    }
+
 }
