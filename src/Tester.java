@@ -79,16 +79,28 @@ public class Tester {
         Player bob = pf.createPlayer("Bob");
         gameState.addPlayer(joe);
         System.out.println("The number of players is: " + gameState.getPlayers().size());
+        for(int i = 0; i < gameState.getPlayers().size(); i++)
+        {
+            System.out.println("The player is: " + gameState.getPlayers().get(i).getName());
+        }
         originator.setState(gameState);
         Memento memento = originator.saveStateToMemento();
         careTaker.add(memento);
         System.out.println("The state of the game has been saved.");
         gameState.addPlayer(bob);
         System.out.println("The number of players is: " + gameState.getPlayers().size());
+        for(int i = 0; i < gameState.getPlayers().size(); i++)
+        {
+            System.out.println("The player is: " + gameState.getPlayers().get(i).getName());
+        }
         memento = careTaker.get(0);
         originator.getStateFromMemento(memento);
         System.out.println("The state of the game has been reverted.");
         gameState = originator.getState();
         System.out.println("The number of players is: " + gameState.getPlayers().size());
+        for(int i = 0; i < gameState.getPlayers().size(); i++)
+        {
+            System.out.println("The player is: " + gameState.getPlayers().get(i).getName());
+        }
     }
 }
