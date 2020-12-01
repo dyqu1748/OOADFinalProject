@@ -16,7 +16,7 @@ function showPlayInfoInput(){
         newPlayerName = newPlayerRow.insertCell();
         newPlayerName.innerHTML = "<td><select name='colorChoice' id = 'colorChoice" + i + "' required><option hidden disabled selected value> -- select an color -- </option><option value='red'>Red</option><option value='green'>Green</option><option value='blue'>Blue</option><option value='yellow'>Yellow</option></select></td>";
         newPlayerName = newPlayerRow.insertCell();
-        newPlayerName.innerHTML = "<td><select name ='genderChoice' id='genderChoice" + i + "'><option value= 'male'>Male</option><option value = 'female'>Female</option></select></td></tr>";
+        newPlayerName.innerHTML = "<td><select name ='genderChoice' id='genderChoice" + i + "' required><option hidden disabled selected value> -- select an gender -- </option><option value= 'male'>Male</option><option value = 'female'>Female</option></select></td></tr>";
     }
     //Fade out player number screen and fade in player info screen
     $("#playerNum").fadeOut("fast");

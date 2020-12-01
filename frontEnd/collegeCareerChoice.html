@@ -2,16 +2,17 @@
 <html>
 <head>
 <title>The Game of Life: College or Career</title>
+<link rel="stylesheet" href="careerPages.css">
 </head>
 <body>
 
-<div id = "collegeChoice"> 
+<div id = "collegeChoice" style="text-align: center;"> 
     <h1 id = "collegeHeader">, are you going to College or straight to a Career? If you do go to college, you will start the game with no money. Otherwise, you will start the game with $7500.</h1>
-    <button type="button" onclick="collegeChoice('college')">College</button>
-    <button type="button" onclick="collegeChoice('career')">Career</button>
+    <button class="buttonCollege" onclick="collegeChoice('college')">College</button>
+    <button class="buttonCareer" onclick="collegeChoice('career')">Career</button>
 </div>
 
-<div id = "careerChoices" style="display: none;">
+<div id = "careerChoices" style="display: none; text-align: center;">
     <h1 id = "careerHeader">, what career would you like to choose?</h1>
 </div>
 
