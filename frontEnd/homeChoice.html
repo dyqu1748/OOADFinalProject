@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Game of Life: Home Choice</title>
+    <link rel="stylesheet" href="homeChoice.css">
+</head>
+<body>
+    <div class = "selectHome">
+        <h1 id = "homeHeader">, buy a Home.</h1>
+        <form>
+            <p>Select the Home you would like to buy:</p>
+            <input type="radio" id="farm" name="home" value="FarmHouse" required>
+            <label for="farm" >
+                <img src="images/Home%20Choices/FarmHouse.png">Farm House: $3000
+            </label>
+
+
+            <input type="radio" id = "sub" name="home" value ="SuburbanHome">
+            <label for="sub">
+                <img src="images/Home%20Choices/Suburban.png">Suburban Home: $5000
+            </label>
+
+            <input type="radio" id="mansion" name="home" value ="Mansion">
+            <label for="mansion">
+                <img src="images/Home%20Choices/Mansion.png">Mansion: $10000
+            </label>
+
+        </form>
+
+        <br>
+        <form class="insurance">
+            <p>Would you like to add insurance to your new home? It'll cost $100 for the Farm House, $500 for the Suburban Home, or $1000 for the Mansion.</p>
+            <input type="checkbox" id="Insurance" name="Insurance" value="Insurance">
+            <label for="Insurance">Add insurance to home</label><br>
+        </form>
+        <br>
+        <input type="submit" value="Submit">
+
+    </div>
+
+</body>
+</html>

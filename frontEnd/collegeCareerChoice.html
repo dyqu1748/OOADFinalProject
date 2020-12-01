@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Game of Life: College or Career</title>
+<link rel="stylesheet" href="careerPages.css">
+<script src="collegeCareerChoice.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+
+<div id = "collegeChoice" style="text-align: center;">
+    <h1 id = "collegeHeader">, are you going to College or straight to a Career? If you do go to college, you will start the game with no money. Otherwise, you will start the game with $7500.</h1>
+
+
+    <button class="buttonCollege" onclick="collegeChoice('college')">
+        <img src="images/educationIcon.png"><br>College
+    </button>
+
+    <button class="buttonCareer" onclick="collegeChoice('career')">
+        <img src="images/workIcon.png"><br>Career
+    </button>
+</div>
+
+<div id = "careerChoices" style="display: none; text-align: center;">
+    <h1 id = "careerHeader">, what career would you like to choose?</h1>
+</div>
+
+</body>
+</html>
