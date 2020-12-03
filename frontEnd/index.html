@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Game of Life: Home Page</title>
+<link rel="stylesheet" href="index.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+
+<div id ="titleScreen" style="text-align: center;">
+<h1>The Game of Life</h1>
+<button class='playButton' onclick="showPlayNumberInput()">Play</button>
+</div>
+
+<div id = "playerNum" style="display: none; text-align: center;">
+    <h2>Select Number of Players</h2>
+    <form name="numPlayerInput" action="" onsubmit="return showPlayInfoInput()">
+        <input type="number" id="numPlayers" name="numPlayers" min="2" max="4" size="1" maxlength="1" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+</div>
+
+<div id = "playerInfo" style="display: none; text-align: center;">
+    <h2>Player Info</h2>
+    <form name ="playerInfoInput" action="" on>
+        <table class="centerTable" id = "playerInfoTable">
+            <thead>
+                <tr>
+                    <th>Player Names</th>
+                    <th>Car Color</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+        </table><br><br>
+        <input type="submit" value = "Submit">
+    </form>
+</div>
+
+</body>
+</html>

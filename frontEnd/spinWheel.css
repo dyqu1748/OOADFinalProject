@@ -1,0 +1,16 @@
+body {
+    background-color: #FCF7F7;
+    margin: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+}
